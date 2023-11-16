@@ -1,0 +1,34 @@
+public class FindMaxInArray {
+    public static void main(String[] args) {
+        // Sample array
+        int[] array = {4, 2, 8, 6, 5};
+
+        // Find the maximum element in the array
+        int max = findMax(array);
+
+        // Print the result
+        System.out.println("The maximum element in the array is: " + max);
+    }
+
+    // Function to find the maximum element in an array
+    public static int findMax(int[] arr) {
+        // Check if the array is empty
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("Array is empty");
+        }
+
+        // Initialize the maximum value with the first element of the array
+        int max = arr[0];
+
+        // Iterate through the array starting from the second element
+        for (int i = 1; i < arr.length; i++) {
+            // Update max if the current element is greater than the current max
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        // Return the maximum element
+        return max;
+    }
+}
